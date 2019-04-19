@@ -25,4 +25,5 @@ delay for a while;
 ## Cấu trúc của buffer  
 * Buffer là một mảng N phần tử có chung 1 kiểu xác định. Trạng thái của buffer được mô tả bằng số lượng tin nhắn n, chứa trong buffer, và bằng 2 index - index out để đọc (read) và index in để ghi (write).  
 * Việc ghi (write) vào buffer được dự tính trước bằng cách kiểm tra điều kiện "buffer đã đầy", nghĩa là  n==N, và việc đọc (read) từ buffer - kiểm tra điều kiện "buffer đã rỗng" : nghĩa là tốc độ read cao hơn write. Trong trạng thái thông thường index write có một chút cao hơn giá trị index read, được mô tả trong mô hình bản vẽ sau:  
-![](‪file:///C:\Users\phanh\Desktop\Capture.PNG)
+![Capture](https://user-images.githubusercontent.com/24553030/56429992-86bf1c00-62cd-11e9-8627-148f384cc8a6.PNG)
+
