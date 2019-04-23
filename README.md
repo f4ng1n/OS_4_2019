@@ -112,7 +112,7 @@ Vì thế, mô tả class buffer Tbuffer có thể được bổ sung bởi các
 - Phân tích các tình huống khi tốc độ ghi dữ liệu cao hơn tốc độ đọc và khi tốc độ ghi dữ liệu thấp hơn tốc độ đọc.  
 - Để có thể kết thúc chính xác một chương trình để chặn các luồng, hãy sử dụng hàm pthread_cond_cond_med ().  
 # Câu hỏi:
-## 1.	Дайте определение понятия «условная переменная».    
+## 1.	Дайте определение понятия «условная переменная» (định nghĩa "biến điều kiện") 
 Условная переменная — примитив синхронизации, обеспечивающий блокирование одного или нескольких потоков до момента поступления сигнала от другого потока о выполнении некоторого условия или до истечения максимального промежутка времени ожидания. Условные переменные используются вместе с ассоциированным мьютексом и являются элементом некоторых видов мониторов.  
 *Biến điều kiện là một cơ chế đồng bộ hóa đảm bảo chặn một hoặc một số luồng cho đến khi nhận được tín hiệu từ luồng khác về việc thực hiện một điều kiện nhất định hoặc cho đến khi hết thời gian chờ tối đa. Các biến có điều kiện được sử dụng cùng với mutex liên quan và là một phần của một số loại màn hình nhất định.*  
 ## 2.	Какие действия выполняются над мьютексом, адрес которого передается в операцию ожидания условной переменной? Какова цель этих действий?  
