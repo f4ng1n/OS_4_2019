@@ -37,7 +37,7 @@ class TBuffer
 void TBuffer::Write(char m)
 {
 	//вход в критический участок;
-	pthread_mutex_trylock(&mutex);
+	pthread_mutex_lock(&mutex);
 
 	while (n == 5)
 	{//буфер полный
@@ -46,7 +46,7 @@ void TBuffer::Write(char m)
 	}
 	n++;
 	Buf[in] = m;
-	//cout << "Buf: " << Buf << endl;
+	//cout << "Buffer: " << Buf << endl;
 	in = (in + 1) % 5;
 
 	//сигнализировать о возможности чтения;
@@ -60,7 +60,7 @@ char TBuffer::Read()
 {
 	//вход в критический участок;
 	
-	pthread_mutex_trylock(&mutex);
+	pthread_mutex_lock(&mutex);
 
 	while (n == 0) 
 	{//буфер пустой 
@@ -115,7 +115,6 @@ void* func_2(void* args)
 int main()
 {
 	Args pthread_arg; 
-
 	pthread_arg.flag_1 = 0;
 	pthread_arg.flag_2 = 0;
 
