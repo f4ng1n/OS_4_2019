@@ -1,6 +1,6 @@
 # OS_4_2019
 # INTERACTION OF THREADS THROUGH A BUFFER, REALIZED BY CONDITIONAL VARIABLES
-## Mục đích bài lab:  làm quen với kỹ cơ chế tương tác các thread thông qua buffer (bộ đệm) được xây dựng trên các biến điều kiện.  
+## Mục đích bài lab:  làm quen với cơ chế tương tác các thread thông qua buffer (bộ đệm) được xây dựng trên các biến điều kiện.  
 
 ## Lý thuyết tổng quan  
 * Bộ đệm (buffering) là công cụ phù hợp với tốc độ ghi (write) dữ liệu của một thread này và tốc độ đọc (read) của một thread khác. Trong trường hợp này thì bộ đệm dùng chung, chia đối tượng ra thành thread đọc và thread ghi.
